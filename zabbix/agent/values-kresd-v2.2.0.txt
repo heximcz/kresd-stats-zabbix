@@ -1,3 +1,4 @@
+-- knot resolver v2.2.0
 answer.1ms
 answer.10ms
 answer.50ms
