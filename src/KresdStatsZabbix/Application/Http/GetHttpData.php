@@ -15,7 +15,7 @@ class GetHttpData
     public function getJsonDataFromUrl(LoadConfig $config): ?string
     {
         $params = $config->getConfig();
-        $url = 'https://'.$params['server']['addr'].':'.$params['server']['port'].'/'.$params['server']['service'];
+        $url = 'https://' . $params['server']['addr'] . ':' . $params['server']['port'] . '/' . $params['server']['service'];
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -29,7 +29,9 @@ class GetHttpData
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
         $response = curl_exec($ch);
 
-        if ($response === false) throw new \Exception('Curl error: ' . curl_error($ch));
+        if ($response === false) {
+            throw new \Exception('Curl error: ' . curl_error($ch));
+        }
 
         return $response;
     }
