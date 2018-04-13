@@ -25,7 +25,9 @@ class ProcessJsonData
             if (array_key_exists($key, $data)) {
                 return $data[$key];
             }
-            throw new \Exception('Key: ' . $key . ' not exist.');
+            // after server reboot some values non-exist
+            return "-1";
+            //throw new \Exception('Key: ' . $key . ' not exist.');
         }
         throw new \Exception('File: ' . $file . ' not exist or it is empty.');
     }
