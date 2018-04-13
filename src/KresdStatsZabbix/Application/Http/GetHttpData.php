@@ -26,6 +26,7 @@ class GetHttpData
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
         $response = curl_exec($ch);
 
         if ($response === false) throw new \Exception('Curl error: ' . curl_error($ch));
