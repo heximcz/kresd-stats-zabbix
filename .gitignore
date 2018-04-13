@@ -1,0 +1,5 @@
+/vendor/
+/.idea/
+/kresd-stats-zabbix.iml
+/composer.lock
+/config.yml

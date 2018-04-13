@@ -1,0 +1,15 @@
+server:
+    # IP address (do not use 'localhost', use 127.0.0.1)
+    addr: '127.0.0.1'
+    port: '8083'
+    service: 'stats'
+
+# temporary file with actual statistics data (full path)
+stats-file: '/tmp/statistics.txt'
+
+# email error setting
+email:
+    # fake email name | system mail name
+    from: 'kresd-serverXX@<fake domain>'
+    # real email
+    to:   '<email>@<domain>'
