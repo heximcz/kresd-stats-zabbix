@@ -1,5 +1,5 @@
 server:
-    # IP address (do not use 'localhost', use 127.0.0.1)
+    # IP address (recommended: do not use 'localhost', use ip address)
     addr: '127.0.0.1'
     port: '8053'
     service: 'stats'
@@ -14,4 +14,4 @@ email:
     # fake email name | system mail name
     from: 'kresd-serverXX@<fake domain>'
     # real email
-    to:   '<email>@<domain>'
+    to:   '<name>@<domain>'
