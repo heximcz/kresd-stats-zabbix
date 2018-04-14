@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-04-13T22:44:59Z</date>
+    <date>2018-04-14T09:10:42Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -916,7 +916,7 @@
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
-                    <units>min</units>
+                    <units/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -941,12 +941,7 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing>
-                        <step>
-                            <type>9</type>
-                            <params/>
-                        </step>
-                    </preprocessing>
+                    <preprocessing/>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
@@ -962,7 +957,7 @@
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
-                    <units>min</units>
+                    <units/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -987,12 +982,7 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing>
-                        <step>
-                            <type>9</type>
-                            <params/>
-                        </step>
-                    </preprocessing>
+                    <preprocessing/>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
@@ -1008,7 +998,7 @@
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
-                    <units>min</units>
+                    <units/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1033,12 +1023,7 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing>
-                        <step>
-                            <type>9</type>
-                            <params/>
-                        </step>
-                    </preprocessing>
+                    <preprocessing/>
                     <jmx_endpoint/>
                     <master_item/>
                 </item>
@@ -1493,13 +1478,13 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>kresd.stats.[worker.systime]</key>
-                    <delay>1m</delay>
+                    <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>min</units>
+                    <units/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1677,13 +1662,13 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>kresd.stats.[worker.usertime]</key>
-                    <delay>1m</delay>
+                    <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
                     <status>0</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>min</units>
+                    <units/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
                     <snmpv3_securitylevel>0</snmpv3_securitylevel>
@@ -1725,6 +1710,24 @@
             <screens/>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Kresd Statistics:kresd.stats.[answer.servfail].last(,0)}&gt;1200</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Too many SERVFAIL on {HOST.NAME}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+    </triggers>
     <graphs>
         <graph>
             <name>Kresd Answers</name>
@@ -1975,7 +1978,7 @@
             </graph_items>
         </graph>
         <graph>
-            <name>Kresd Worker CPU</name>
+            <name>Kresd Predict</name>
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
@@ -2001,7 +2004,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.systime]</key>
+                        <key>kresd.stats.[predict.epoch]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2013,7 +2016,63 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.timeout]</key>
+                        <key>kresd.stats.[predict.learned]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>2774A4</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Kresd Statistics</host>
+                        <key>kresd.stats.[predict.queue]</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Kresd Worker CPU</name>
+            <width>900</width>
+            <height>200</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>7</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Kresd Statistics</host>
+                        <key>kresd.stats.[worker.systime]</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>2774A4</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>7</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Kresd Statistics</host>
+                        <key>kresd.stats.[worker.usertime]</key>
                     </item>
                 </graph_item>
             </graph_items>
