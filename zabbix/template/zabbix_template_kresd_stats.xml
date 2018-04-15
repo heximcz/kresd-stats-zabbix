@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-04-14T09:10:42Z</date>
+    <date>2018-04-15T18:49:07Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -40,7 +40,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.1ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.1ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -86,7 +86,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.10ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.10ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -132,7 +132,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.50ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.50ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -178,7 +178,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.100ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.100ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -224,7 +224,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.250ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.250ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -270,7 +270,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.500ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.500ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -316,7 +316,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.1000ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.1000ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -362,7 +362,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.1500ms]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.1500ms]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -408,7 +408,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.cached]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.cached]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -454,7 +454,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.nodata]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.nodata]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -500,7 +500,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.noerror]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.noerror]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -546,7 +546,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.nxdomain]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.nxdomain]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -592,7 +592,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.servfail]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.servfail]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -638,7 +638,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.slow]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.slow]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -684,7 +684,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[answer.total]</key>
+                    <key>kresd.stats.[{HOST.IP}, answer.total]</key>
                     <delay>5m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -725,7 +725,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[cache.delete]</key>
+                    <key>kresd.stats.[{HOST.IP}, cache.delete]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -771,7 +771,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[cache.hit]</key>
+                    <key>kresd.stats.[{HOST.IP}, cache.hit]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -817,7 +817,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[cache.insert]</key>
+                    <key>kresd.stats.[{HOST.IP}, cache.insert]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -863,7 +863,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[cache.miss]</key>
+                    <key>kresd.stats.[{HOST.IP}, cache.miss]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -909,7 +909,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[predict.epoch]</key>
+                    <key>kresd.stats.[{HOST.IP}, predict.epoch]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -950,7 +950,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[predict.learned]</key>
+                    <key>kresd.stats.[{HOST.IP}, predict.learned]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -991,7 +991,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[predict.queue]</key>
+                    <key>kresd.stats.[{HOST.IP}, predict.queue]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1032,7 +1032,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[query.dnssec]</key>
+                    <key>kresd.stats.[{HOST.IP}, query.dnssec]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1078,7 +1078,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[query.edns]</key>
+                    <key>kresd.stats.[{HOST.IP}, query.edns]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1124,7 +1124,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.concurrent]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.concurrent]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1165,7 +1165,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.csw]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.csw]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1211,7 +1211,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.dropped]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.dropped]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1257,7 +1257,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.ipv4]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.ipv4]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1298,7 +1298,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.ipv6]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.ipv6]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1339,7 +1339,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.pagefaults]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.pagefaults]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1385,7 +1385,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.queries]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.queries]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1431,7 +1431,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.rss]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.rss]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1477,7 +1477,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.systime]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.systime]</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1523,7 +1523,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.tcp]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.tcp]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1569,7 +1569,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.timeout]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.timeout]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1615,7 +1615,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.udp]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.udp]</key>
                     <delay>1m</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1661,7 +1661,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>kresd.stats.[worker.usertime]</key>
+                    <key>kresd.stats.[{HOST.IP}, worker.usertime]</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -1712,7 +1712,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template Kresd Statistics:kresd.stats.[answer.servfail].last(,0)}&gt;1200</expression>
+            <expression>{Template Kresd Statistics:kresd.stats.[{HOST.IP}, answer.servfail].last(,0)}&gt;1200</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Too many SERVFAIL on {HOST.NAME}</name>
@@ -1756,7 +1756,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.cached]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.cached]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1768,7 +1768,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.nodata]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.nodata]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1780,7 +1780,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.noerror]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.noerror]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1792,7 +1792,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.nxdomain]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.nxdomain]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -1824,7 +1824,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.1ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.1ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1836,7 +1836,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.10ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.10ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1848,7 +1848,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.50ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.50ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1860,7 +1860,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.100ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.100ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1872,7 +1872,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.250ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.250ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1884,7 +1884,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.500ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.500ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1896,7 +1896,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.1000ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.1000ms]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -1908,7 +1908,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.1500ms]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.1500ms]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -1940,7 +1940,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.servfail]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.servfail]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -1972,7 +1972,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[answer.total]</key>
+                        <key>kresd.stats.[{HOST.IP}, answer.total]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2004,7 +2004,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[predict.epoch]</key>
+                        <key>kresd.stats.[{HOST.IP}, predict.epoch]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2016,7 +2016,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[predict.learned]</key>
+                        <key>kresd.stats.[{HOST.IP}, predict.learned]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2028,7 +2028,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[predict.queue]</key>
+                        <key>kresd.stats.[{HOST.IP}, predict.queue]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2060,7 +2060,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.systime]</key>
+                        <key>kresd.stats.[{HOST.IP}, worker.systime]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2072,7 +2072,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.usertime]</key>
+                        <key>kresd.stats.[{HOST.IP}, worker.usertime]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2104,7 +2104,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.dropped]</key>
+                        <key>kresd.stats.[{HOST.IP}, worker.dropped]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2116,7 +2116,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.pagefaults]</key>
+                        <key>kresd.stats.[{HOST.IP}, worker.pagefaults]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2128,7 +2128,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.queries]</key>
+                        <key>kresd.stats.[{HOST.IP}, worker.queries]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2140,7 +2140,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Kresd Statistics</host>
-                        <key>kresd.stats.[worker.timeout]</key>
+                        <key>kresd.stats.[{HOST.IP}, worker.timeout]</key>
                     </item>
                 </graph_item>
             </graph_items>
