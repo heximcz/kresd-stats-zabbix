@@ -72,19 +72,24 @@ class GetStatisticsValuesCommand extends Command
         }
 
         try {
-
             $nameOfValue = $input->getArgument('name');
             $value = new ProcessJsonData();
             echo $value->getValueFromJsonParameter($tmpFile, $nameOfValue);
-
         } catch (\Exception | InvalidArgumentException $exception) {
-            if ($this->params['email']['allow']) {
-                $this->logger->addMailBody($exception->getMessage());
-                $this->logger->send($this->params['email']['from'], $this->params['email']['to']);
-            }
+            $this->sendEmail($exception);
             throw $exception;
         }
 
+    }
+
+    /**
+     * @param \Exception $exception
+     */
+    private function sendEmail(\Exception $exception) {
+        if ($this->params['email']['allow']) {
+            $this->logger->addMailBody($exception->getMessage());
+            $this->logger->send($this->params['email']['from'], $this->params['email']['to']);
+        }
     }
 
 
