@@ -2,21 +2,16 @@
 
 namespace KresdStatsZabbix\Application\Http;
 
-use KresdStatsZabbix\Application\Config\LoadConfig;
-
 class GetHttpData
 {
 
     /**
-     * @param LoadConfig $config
      * @throws \Exception
      * @return string
+     * @param string $url Complete url knot statistics
      */
-    public function getJsonDataFromUrl(LoadConfig $config): ?string
+    public function getJsonDataFromUrl($url): string
     {
-        $params = $config->getConfig();
-        $url = 'https://' . $params['server']['addr'] . ':' . $params['server']['port'] . '/' . $params['server']['service'];
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT,
