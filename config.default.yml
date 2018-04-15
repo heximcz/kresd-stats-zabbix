@@ -2,10 +2,9 @@ server:
     # IP address (recommended: do not use 'localhost', use ip address)
     addr: '127.0.0.1'
     port: '8053'
-    service: 'stats'
 
-# temporary file with actual statistics data (full path)
-stats-file: '/tmp/statistics.txt'
+# directory where store statistic data (end must be /)
+stats-file: '/tmp/'
 
 # email error setting
 email:
