@@ -1,4 +1,6 @@
 server:
+    # Protocol (https or http)
+    proto: 'https'
     # IP address (recommended: do not use 'localhost', use ip address)
     addr: '127.0.0.1'
     port: '8053'

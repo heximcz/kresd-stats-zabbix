@@ -11,6 +11,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Filesystem\Exception\IOException;
 use Symfony\Component\Filesystem\Filesystem;
+use \Exception;
 
 /**
  * Class PrepareJsonDataCommand
@@ -64,24 +65,29 @@ class PrepareJsonDataCommand extends Command
 
         // override config.yml
         if (!is_null($addr) && !is_null($port)) {
-            $this->createTemporaryData($this->params['stats-file'] . $addr . '_' . $port . '.tmp', $addr, $port);
+            $this->createTemporaryData($addr, $port, $this->params['server']['proto'], $this->params['stats-file'] . $addr . '_' . $port . '.tmp');
             return;
         }
 
         // use config.yml
-        $this->createTemporaryData(null, $this->params['server']['addr'], $this->params['server']['port']);
+        $this->createTemporaryData($this->params['server']['addr'], $this->params['server']['port'], $this->params['server']['proto'], null);
     }
 
     /**
-     * @param null|string $file
      * @param string $addr
      * @param string $port
+     * @param string $proto
+     * @param null|string $file
      */
-    private function createTemporaryData($file = null, $addr, $port) {
+    private function createTemporaryData($addr, $port, $proto, $file = null) {
 
         try {
             $http = new GetHttpData();
-            $url = 'https://' . $addr . ':' . $port . '/stats';
+
+            if ($proto!='https' || $proto!='http')
+                throw new Exception('Value: ' . $proto . ' is not equal to http or https');
+
+            $url = $proto . '://' . $addr . ':' . $port . '/stats';
             $data = $http->getJsonDataFromUrl($url);
 
             $fs = new Filesystem();
@@ -91,12 +97,12 @@ class PrepareJsonDataCommand extends Command
             }
 
             if (!$fs->isAbsolutePath($file)) {
-                throw new \Exception($file . ' is not absolute path!');
+                throw new Exception($file . ' is not absolute path!');
             }
 
             $fs->dumpFile($file, $data);
 
-        } catch (\Exception | IOException $exception) {
+        } catch (Exception | IOException $exception) {
             $this->sendEmail($exception);
             throw $exception;
         }
@@ -106,7 +112,7 @@ class PrepareJsonDataCommand extends Command
     /**
      * @param \Exception $exception
      */
-    private function sendEmail(\Exception $exception) {
+    private function sendEmail(Exception $exception) {
         if ($this->params['email']['allow']) {
             $this->logger->addMailBody($exception->getMessage());
             $this->logger->send($this->params['email']['from'], $this->params['email']['to']);

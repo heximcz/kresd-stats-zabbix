@@ -2,11 +2,13 @@
 
 namespace KresdStatsZabbix\Application\Http;
 
+use Exception;
+
 class GetHttpData
 {
 
     /**
-     * @throws \Exception
+     * @throws Exception
      * @return string
      * @param string $url Complete url knot statistics
      */
@@ -25,7 +27,7 @@ class GetHttpData
         $response = curl_exec($ch);
 
         if ($response === false) {
-            throw new \Exception('Curl error: ' . curl_error($ch));
+            throw new Exception('Curl error: ' . curl_error($ch));
         }
 
         return $response;
