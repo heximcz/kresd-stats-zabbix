@@ -84,7 +84,7 @@ class PrepareJsonDataCommand extends Command
         try {
             $http = new GetHttpData();
 
-            if ($proto!='https' || $proto!='http')
+            if ($proto!='https' && $proto!='http')
                 throw new Exception('Value: ' . $proto . ' is not equal to http or https');
 
             $url = $proto . '://' . $addr . ':' . $port . '/stats';
